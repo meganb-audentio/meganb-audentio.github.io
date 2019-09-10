@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <style>
+  body {
+    background: black;
+  }
+
+  h1 {
+    color: white;
+    font-family: sans-serif;
+  }
+
+  @keyframes example {
+    0% {background-color: yellow;}
+    25% {background-color: red;}
+    50% {background-color: blue}
+    100% {background-color: green;}
+  }
+
+  .face {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+    background-color: white;
+    background: radial-gradient(circle at 10px 10px, #000);
+    -webkit-animation-name: example;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+  }
+
+  .face:before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    width: 30px;
+    height: 10px;
+    margin-left: -25px;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+  }
+
+  .face:after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    width: 10px;
+    height: 5px;
+    margin-left: -8px;
+    border-bottom: 3px solid white;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-radius: 0 0 7px 7px;
+  }
+  </style>
+    <title>Practice CSS Animation</title>
+  </head>
+    <body>
+      <h1>ANIMATION!</h1>
+        <div class=face>
+        </div>
+    </body>
+</html>
